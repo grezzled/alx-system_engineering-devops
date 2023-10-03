@@ -1,8 +1,2 @@
 #!/bin/bash
-count=1
-while IFS= read -r line; do
-    if ((count % 2 != 0)); then
-        echo "$line"
-    fi
-    ((count++))
-done
+paste -d| - - | cut -d| -f1
